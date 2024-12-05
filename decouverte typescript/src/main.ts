@@ -1,5 +1,6 @@
 import {Character, Boss} from './domains/game/models/character'
 import {Elf} from './domains/game/models/elf'
+import Item from './domains/game/models/items/item'
 
 // const sam = new Character('Sam', 38) // inference
 
