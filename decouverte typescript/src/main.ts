@@ -1,9 +1,11 @@
 import {Character, Boss} from './domains/game/models/character'
 import {Elf} from './domains/game/models/elf'
-import {Items} from './core/custom-types/arrays'
+import {Array, Items} from './core/custom-types/arrays'
 import {Axe} from './domains/game/models/items/weapons/axe'
 import {Bow} from './domains/game/models/items/weapons/bow'
 import {Potion} from './domains/game/models/items/potion'
+import { Movable } from './domains/game/models/move'
+import {Eagle} from './domains/game/models/eagle'
 
 // const sam = new Character('Sam', 38) // inference
 
@@ -44,3 +46,13 @@ const items: Items = [
     new Potion('Potion +', 500)
 ]
 displayInventory(items)
+
+
+type Moves = Array<Movable>
+const moves: Moves = [
+    new Elf('Legolas', 2931),
+    new Boss('Sauron'),
+    new Eagle()
+    // new Potion('', 10) // pas possible car Potion ne respecte pas Movable
+]
+moves.forEach(item => item.move('right'))
