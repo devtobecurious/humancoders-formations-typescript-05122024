@@ -1,11 +1,24 @@
-export abstract class Character {
+import {Movable} from './move'
+import {Position} from './position'
+
+export abstract class Character implements Movable {
     private _name: string
     #age: number
     protected lifePoints = 100
+    // private position = new Position
 
     constructor(name: string, age: number) {
         this._name = name
         this.#age = age
+    }
+
+    move(direction: string): void {
+        switch(direction) {
+            case 'right': {} break
+            case 'left': {} break
+            case 'Topp': {} break // Oops buggy
+            case 'down': {} break
+        }
     }
 
     get name() {
