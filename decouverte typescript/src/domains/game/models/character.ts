@@ -6,7 +6,7 @@ export abstract class Character implements Movable {
     private _name: string
     #age: number
     protected lifePoints = 100
-    // private position = new Position
+    private position = new Position() 
 
     constructor(name: string, age: number) {
         this._name = name
@@ -16,6 +16,11 @@ export abstract class Character implements Movable {
     //move(direction: string): void {
     // move(direction: 'right' | 'left' | 'top' | 'down'): void {
     move(direction: Direction): void {
+        const vector: Position = {
+            x: 0,
+            y: 0
+        }
+
         switch(direction) {
             case 'right': {} break
             case 'left': {} break

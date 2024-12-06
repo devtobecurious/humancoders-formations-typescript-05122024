@@ -6,6 +6,7 @@ import {Bow} from './domains/game/models/items/weapons/bow'
 import {Potion} from './domains/game/models/items/potion'
 import { Movable } from './domains/game/models/move'
 import {Eagle} from './domains/game/models/eagle'
+import { Position } from './domains/game/models/position'
 
 // const sam = new Character('Sam', 38) // inference
 
@@ -56,3 +57,33 @@ const moves: Moves = [
     // new Potion('', 10) // pas possible car Potion ne respecte pas Movable
 ]
 moves.forEach(item => item.move('down'))
+
+
+//#region Test typage
+const position = new Position()
+const position2: Position = {
+    x: 0,
+    y: 0
+}
+
+const position3 = {
+    x: 0,
+    y: 0
+}
+
+type WithXY = {x: number, y: number}
+function displayPosition(item: WithXY): void {
+    console.info(item.x, item.y)
+}
+
+displayPosition(position)
+displayPosition(position2)
+displayPosition(position3)
+
+const position3D = {
+    x: 0,
+    y: 1,
+    z: 0
+}
+displayPosition(position3D)
+//#endregion
