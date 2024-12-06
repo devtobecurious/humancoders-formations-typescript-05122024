@@ -1,3 +1,5 @@
+import { Direction } from "../../../core/custom-types/strings";
+
 /**
  * 
  */
@@ -6,5 +8,5 @@ export interface Movable {
      * 
      * @param direction 
      */
-    move(direction: string): void
+    move(direction: Direction): void
 }

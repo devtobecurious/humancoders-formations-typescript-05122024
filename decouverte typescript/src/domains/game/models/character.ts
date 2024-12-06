@@ -1,5 +1,6 @@
 import {Movable} from './move'
 import {Position} from './position'
+import {Direction} from '../../../core/custom-types/strings'
 
 export abstract class Character implements Movable {
     private _name: string
@@ -12,11 +13,14 @@ export abstract class Character implements Movable {
         this.#age = age
     }
 
-    move(direction: string): void {
+    //move(direction: string): void {
+    // move(direction: 'right' | 'left' | 'top' | 'down'): void {
+    move(direction: Direction): void {
         switch(direction) {
             case 'right': {} break
             case 'left': {} break
-            case 'Topp': {} break // Oops buggy
+            //case 'Topp': {} break // Oops buggy
+            case 'top': {} break
             case 'down': {} break
         }
     }

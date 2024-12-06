@@ -55,4 +55,4 @@ const moves: Moves = [
     new Eagle()
     // new Potion('', 10) // pas possible car Potion ne respecte pas Movable
 ]
-moves.forEach(item => item.move('right'))
+moves.forEach(item => item.move('down'))
