@@ -29,7 +29,7 @@ function displayCharacters(items: Character[]): void {
 // const arrayCharacters: Character[] = []
 const arrayCharacters: Character[] = [ 
     new Boss('Sauron'),
-    new Elf('Legolas', 2931)
+    new Elf('Legolas', 2931, new Axe('', 100))
 ]
 displayCharacters(arrayCharacters)
 
@@ -50,7 +50,7 @@ displayInventory(items)
 
 type Moves = Array<Movable>
 const moves: Moves = [
-    new Elf('Legolas', 2931),
+    new Elf('Legolas', 2931, new Bow('', 50)),
     new Boss('Sauron'),
     new Eagle()
     // new Potion('', 10) // pas possible car Potion ne respecte pas Movable
